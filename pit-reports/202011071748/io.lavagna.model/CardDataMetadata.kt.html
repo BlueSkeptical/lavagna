@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>CardDataMetadata.kt</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5d16432f_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5d16432f_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>/**</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5d16432f_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5d16432f_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * This file is part of lavagna.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5d16432f_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5d16432f_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5d16432f_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5d16432f_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * lavagna is free software: you can redistribute it and/or modify</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5d16432f_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5d16432f_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * it under the terms of the GNU General Public License as published by</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5d16432f_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5d16432f_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * the Free Software Foundation, either version 3 of the License, or</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5d16432f_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5d16432f_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * (at your option) any later version.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5d16432f_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5d16432f_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5d16432f_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5d16432f_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * lavagna is distributed in the hope that it will be useful,</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5d16432f_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5d16432f_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5d16432f_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5d16432f_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5d16432f_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5d16432f_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * GNU General Public License for more details.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5d16432f_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5d16432f_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5d16432f_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5d16432f_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * You should have received a copy of the GNU General Public License</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5d16432f_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5d16432f_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * along with lavagna.  If not, see //www.gnu.org/licenses/&#62;.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5d16432f_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5d16432f_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5d16432f_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5d16432f_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package io.lavagna.model</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5d16432f_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5d16432f_18'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5d16432f_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5d16432f_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import ch.digitalfondue.npjt.ConstructorAnnotationRowMapper.Column</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5d16432f_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5d16432f_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5d16432f_21'/>
+21
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5d16432f_21'>2</a>
+<span>
+1. getCardId : replaced int return with 0 for io/lavagna/model/CardDataMetadata::getCardId &rarr; KILLED<br/>
+2. getId : replaced int return with 0 for io/lavagna/model/CardDataMetadata::getId &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>open class CardDataMetadata(@Column(&#34;CARD_DATA_ID&#34;) val id: Int, @Column(&#34;CARD_DATA_CARD_ID_FK&#34;) val cardId: Int,</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5d16432f_22'/>
+22
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5d16432f_22'>1</a>
+<span>
+1. getReferenceId : replaced Integer return value with 0 for io/lavagna/model/CardDataMetadata::getReferenceId &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                            @Column(&#34;CARD_DATA_REFERENCE_ID&#34;) val referenceId: Int?, @Column(&#34;CARD_DATA_TYPE&#34;) val type: CardType,</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5d16432f_23'/>
+23
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5d16432f_23'>1</a>
+<span>
+1. getOrder : replaced int return with 0 for io/lavagna/model/CardDataMetadata::getOrder &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                            @Column(&#34;CARD_DATA_ORDER&#34;) val order: Int)</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5d16432f_21'>21</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5d16432f_21'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getCardId<br/><b>Killed by : </b>io.lavagna.service.CardDataRepositoryTest.testFindMetadataById(io.lavagna.service.CardDataRepositoryTest)</span></span> replaced int return with 0 for io/lavagna/model/CardDataMetadata::getCardId &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>getId<br/><b>Killed by : </b>io.lavagna.service.CardDataRepositoryTest.testFindMetadataById(io.lavagna.service.CardDataRepositoryTest)</span></span> replaced int return with 0 for io/lavagna/model/CardDataMetadata::getId &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5d16432f_22'>22</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5d16432f_22'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getReferenceId<br/><b>Killed by : </b>io.lavagna.service.CardDataServiceTest.TestUpdateActionItem(io.lavagna.service.CardDataServiceTest)</span></span> replaced Integer return value with 0 for io/lavagna/model/CardDataMetadata::getReferenceId &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5d16432f_23'>23</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5d16432f_23'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getOrder<br/><b>Killed by : </b>io.lavagna.service.CardDataServiceTest.TestReorderActionLists(io.lavagna.service.CardDataServiceTest)</span></span> replaced int return with 0 for io/lavagna/model/CardDataMetadata::getOrder &rarr; KILLED</p> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+<li class='mutator'>BOOLEAN_FALSE_RETURN</li>
+<li class='mutator'>BOOLEAN_TRUE_RETURN</li>
+<li class='mutator'>CONDITIONALS_BOUNDARY_MUTATOR</li>
+<li class='mutator'>EMPTY_RETURN_VALUES</li>
+<li class='mutator'>INCREMENTS_MUTATOR</li>
+<li class='mutator'>INVERT_NEGS_MUTATOR</li>
+<li class='mutator'>MATH_MUTATOR</li>
+<li class='mutator'>NEGATE_CONDITIONALS_MUTATOR</li>
+<li class='mutator'>NULL_RETURN_VALUES</li>
+<li class='mutator'>PRIMITIVE_RETURN_VALS_MUTATOR</li>
+<li class='mutator'>VOID_METHOD_CALL_MUTATOR</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>io.lavagna.service.ProjectServiceFindRelatedTest.testFindRelatedProjectShortNameByColumnId(io.lavagna.service.ProjectServiceFindRelatedTest) (7 ms)</li><li>io.lavagna.service.ProjectServiceFindRelatedTest.testFindRelatedProjectShortNameByLabelListValudIdPath(io.lavagna.service.ProjectServiceFindRelatedTest) (7 ms)</li><li>io.lavagna.service.ProjectServiceFindRelatedTest.testFindRelatedProjectShortNameByCardId(io.lavagna.service.ProjectServiceFindRelatedTest) (25 ms)</li><li>io.lavagna.service.ProjectServiceFindRelatedTest.testFindRelatedProjectShortNameByLabelValueId(io.lavagna.service.ProjectServiceFindRelatedTest) (8 ms)</li><li>io.lavagna.service.ProjectServiceFindRelatedTest.testFindRelatedProjectShortNameByColumnDefinitionId(io.lavagna.service.ProjectServiceFindRelatedTest) (8 ms)</li><li>io.lavagna.web.api.CardDataControllerTest.reorderActionItems(io.lavagna.web.api.CardDataControllerTest) (1 ms)</li><li>io.lavagna.service.CardEventRepositoryTest.findUsersIdFor(io.lavagna.service.CardEventRepositoryTest) (10 ms)</li><li>io.lavagna.service.CardDataServiceTest.TestActionListAndItems(io.lavagna.service.CardDataServiceTest) (14 ms)</li><li>io.lavagna.service.CardDataServiceTest.TestDeleteActionItemAndUndo(io.lavagna.service.CardDataServiceTest) (11 ms)</li><li>io.lavagna.service.ProjectServiceFindRelatedTest.testFindNothing(io.lavagna.service.ProjectServiceFindRelatedTest) (10 ms)</li><li>io.lavagna.service.CardDataServiceTest.TestDeleteActionListWithContentAndUndo(io.lavagna.service.CardDataServiceTest) (15 ms)</li><li>io.lavagna.service.CardServiceTest.testCloneCard(io.lavagna.service.CardServiceTest) (17 ms)</li><li>io.lavagna.service.CalendarServiceTest.testGetCalDavCalendar(io.lavagna.service.CalendarServiceTest) (78 ms)</li><li>io.lavagna.service.ProjectServiceFindRelatedTest.testFindRelatedProjectShortNameByLabelId(io.lavagna.service.ProjectServiceFindRelatedTest) (6 ms)</li><li>io.lavagna.service.CardDataServiceTest.TestToggleActionItem(io.lavagna.service.CardDataServiceTest) (11 ms)</li><li>io.lavagna.service.CardDataServiceTest.findByIds(io.lavagna.service.CardDataServiceTest) (7 ms)</li><li>io.lavagna.service.NotificationServiceTest.sendEmailTestWithoutMyEvents(io.lavagna.service.NotificationServiceTest) (17 ms)</li><li>io.lavagna.service.ProjectServiceFindRelatedTest.testFindRelatedProjectShortNameByBoardShortname(io.lavagna.service.ProjectServiceFindRelatedTest) (7 ms)</li><li>io.lavagna.service.CardDataServiceTest.TestDeleteCommentAndUndo(io.lavagna.service.CardDataServiceTest) (11 ms)</li><li>io.lavagna.service.ImportServiceTest.saveTrelloBoardsToDbTest(io.lavagna.service.ImportServiceTest) (13 ms)</li><li>io.lavagna.service.CalendarServiceTest.testGetProjectStandardCalendar(io.lavagna.service.CalendarServiceTest) (13 ms)</li><li>io.lavagna.service.NotificationServiceTest.sendEmailTest(io.lavagna.service.NotificationServiceTest) (102 ms)</li><li>io.lavagna.service.ProjectServiceFindRelatedTest.testFindRelatedProjectShortNameByEventId(io.lavagna.service.ProjectServiceFindRelatedTest) (8 ms)</li><li>io.lavagna.service.CardDataRepositoryTest.testFindMetadataById(io.lavagna.service.CardDataRepositoryTest) (8 ms)</li><li>io.lavagna.service.CardDataServiceTest.assignSameFileToCard(io.lavagna.service.CardDataServiceTest) (8 ms)</li><li>io.lavagna.service.EventRepositoryTest.testLastUpdateOnCardChange(io.lavagna.service.EventRepositoryTest) (14 ms)</li><li>io.lavagna.service.CardDataServiceTest.TestMoveActionItem(io.lavagna.service.CardDataServiceTest) (17 ms)</li><li>io.lavagna.service.CardDataServiceTest.TestUpdateActionList(io.lavagna.service.CardDataServiceTest) (9 ms)</li><li>io.lavagna.service.ExportImportServiceTest.testImportAndExport(io.lavagna.service.ExportImportServiceTest) (335 ms)</li><li>io.lavagna.service.CardDataServiceTest.TestReorderActionList(io.lavagna.service.CardDataServiceTest) (10 ms)</li><li>io.lavagna.service.CardDataServiceTest.TestUpdateComment(io.lavagna.service.CardDataServiceTest) (9 ms)</li><li>io.lavagna.service.CardDataServiceTest.TestCreateCommentAndFetch(io.lavagna.service.CardDataServiceTest) (11 ms)</li><li>io.lavagna.service.CardDataServiceTest.TestUploadSameFileToCard(io.lavagna.service.CardDataServiceTest) (11 ms)</li><li>io.lavagna.service.CardDataServiceTest.testCheckEnsureReferenceIdConstraints(io.lavagna.service.CardDataServiceTest) (6 ms)</li><li>io.lavagna.service.CardDataServiceTest.assignFileToCard(io.lavagna.service.CardDataServiceTest) (8 ms)</li><li>io.lavagna.service.CardDataServiceTest.TestUpdateDescription(io.lavagna.service.CardDataServiceTest) (12 ms)</li><li>io.lavagna.service.NotificationServiceTest.testCheck(io.lavagna.service.NotificationServiceTest) (10 ms)</li><li>io.lavagna.service.ImportServiceTest.saveTrelloBoardsToDbCheckListTest(io.lavagna.service.ImportServiceTest) (20 ms)</li><li>io.lavagna.service.CardDataServiceTest.TestReorderActionLists(io.lavagna.service.CardDataServiceTest) (8 ms)</li><li>io.lavagna.service.ImportServiceTest.saveTrelloBoardsToDbLabelsTest(io.lavagna.service.ImportServiceTest) (9 ms)</li><li>io.lavagna.service.CalendarServiceTest.testGetStandardCalendar(io.lavagna.service.CalendarServiceTest) (15 ms)</li><li>io.lavagna.service.CardDataServiceTest.TestDeleteFilesAndUndo(io.lavagna.service.CardDataServiceTest) (17 ms)</li><li>io.lavagna.service.EventRepositoryTest.testLastUpdateOnUndo(io.lavagna.service.EventRepositoryTest) (10 ms)</li><li>io.lavagna.service.CardDataServiceTest.TestUpdateActionItem(io.lavagna.service.CardDataServiceTest) (8 ms)</li><li>io.lavagna.service.CardDataServiceTest.TestUploadFiles(io.lavagna.service.CardDataServiceTest) (10 ms)</li><li>io.lavagna.service.ProjectServiceFindRelatedTest.testFindRelatedProjectShortNameByCardDataId(io.lavagna.service.ProjectServiceFindRelatedTest) (8 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='http://pitest.org'>PIT</a> 1.5.2
+
+</body>
+</html>

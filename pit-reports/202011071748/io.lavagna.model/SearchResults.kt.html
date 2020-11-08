@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>SearchResults.kt</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@41a5c847_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@41a5c847_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>/**</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@41a5c847_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@41a5c847_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * This file is part of lavagna.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@41a5c847_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@41a5c847_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@41a5c847_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@41a5c847_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * lavagna is free software: you can redistribute it and/or modify</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@41a5c847_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@41a5c847_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * it under the terms of the GNU General Public License as published by</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@41a5c847_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@41a5c847_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * the Free Software Foundation, either version 3 of the License, or</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@41a5c847_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@41a5c847_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * (at your option) any later version.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@41a5c847_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@41a5c847_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@41a5c847_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@41a5c847_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * lavagna is distributed in the hope that it will be useful,</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@41a5c847_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@41a5c847_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@41a5c847_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@41a5c847_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@41a5c847_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@41a5c847_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * GNU General Public License for more details.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@41a5c847_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@41a5c847_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@41a5c847_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@41a5c847_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * You should have received a copy of the GNU General Public License</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@41a5c847_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@41a5c847_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * along with lavagna.  If not, see //www.gnu.org/licenses/&#62;.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@41a5c847_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@41a5c847_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@41a5c847_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@41a5c847_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package io.lavagna.model</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@41a5c847_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@41a5c847_18'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@41a5c847_19'/>
+19
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@41a5c847_19'>6</a>
+<span>
+1. getCountPerPage : replaced int return with 0 for io/lavagna/model/SearchResults::getCountPerPage &rarr; NO_COVERAGE<br/>
+2. getPaginate : replaced boolean return with false for io/lavagna/model/SearchResults::getPaginate &rarr; NO_COVERAGE<br/>
+3. getPaginate : replaced boolean return with true for io/lavagna/model/SearchResults::getPaginate &rarr; NO_COVERAGE<br/>
+4. getCount : replaced int return with 0 for io/lavagna/model/SearchResults::getCount &rarr; KILLED<br/>
+5. getCurrentPage : replaced int return with 0 for io/lavagna/model/SearchResults::getCurrentPage &rarr; KILLED<br/>
+6. getFound : replaced return value with Collections.emptyList for io/lavagna/model/SearchResults::getFound &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>class SearchResults(val found: List&#60;CardFullWithCounts&#62;, val count: Int, val currentPage: Int, val countPerPage: Int, val paginate: Boolean) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@41a5c847_20'/>
+20
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@41a5c847_20'>1</a>
+<span>
+1. getTotalPages : replaced int return with 0 for io/lavagna/model/SearchResults::getTotalPages &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    val totalPages: Int</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@41a5c847_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@41a5c847_21'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@41a5c847_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@41a5c847_22'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    init {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@41a5c847_23'/>
+23
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@41a5c847_23'>4</a>
+<span>
+1. &#60;init&#62; : Replaced integer subtraction with addition &rarr; SURVIVED<br/>
+2. &#60;init&#62; : Replaced integer addition with subtraction &rarr; KILLED<br/>
+3. &#60;init&#62; : Replaced integer division with multiplication &rarr; KILLED<br/>
+4. &#60;init&#62; : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        this.totalPages = if (paginate) (count + countPerPage - 1) / countPerPage else 1</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@41a5c847_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@41a5c847_24'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@41a5c847_25'/>
+25
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@41a5c847_25'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@41a5c847_19'>19</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@41a5c847_19'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getCount<br/><b>Killed by : </b>io.lavagna.service.SearchServiceTest.testFindByStatus(io.lavagna.service.SearchServiceTest)</span></span> replaced int return with 0 for io/lavagna/model/SearchResults::getCount &rarr; KILLED</p> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>getCountPerPage<br/><b>Killed by : </b>none</span></span> replaced int return with 0 for io/lavagna/model/SearchResults::getCountPerPage &rarr; NO_COVERAGE</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>getCurrentPage<br/><b>Killed by : </b>io.lavagna.service.SearchServiceTest.testPagination(io.lavagna.service.SearchServiceTest)</span></span> replaced int return with 0 for io/lavagna/model/SearchResults::getCurrentPage &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>getFound<br/><b>Killed by : </b>io.lavagna.service.SearchServiceTest.testWithoutPagination(io.lavagna.service.SearchServiceTest)</span></span> replaced return value with Collections.emptyList for io/lavagna/model/SearchResults::getFound &rarr; KILLED</p> <p class='NO_COVERAGE'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>getPaginate<br/><b>Killed by : </b>none</span></span> replaced boolean return with false for io/lavagna/model/SearchResults::getPaginate &rarr; NO_COVERAGE</p> <p class='NO_COVERAGE'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>getPaginate<br/><b>Killed by : </b>none</span></span> replaced boolean return with true for io/lavagna/model/SearchResults::getPaginate &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@41a5c847_20'>20</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@41a5c847_20'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getTotalPages<br/><b>Killed by : </b>io.lavagna.service.SearchServiceTest.testWithoutPagination(io.lavagna.service.SearchServiceTest)</span></span> replaced int return with 0 for io/lavagna/model/SearchResults::getTotalPages &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@41a5c847_23'>23</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@41a5c847_23'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>io.lavagna.service.SearchServiceTest.testPagination(io.lavagna.service.SearchServiceTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> Replaced integer subtraction with addition &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>io.lavagna.service.SearchServiceTest.testPagination(io.lavagna.service.SearchServiceTest)</span></span> Replaced integer division with multiplication &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>io.lavagna.service.SearchServiceTest.testWithoutPagination(io.lavagna.service.SearchServiceTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+<li class='mutator'>BOOLEAN_FALSE_RETURN</li>
+<li class='mutator'>BOOLEAN_TRUE_RETURN</li>
+<li class='mutator'>CONDITIONALS_BOUNDARY_MUTATOR</li>
+<li class='mutator'>EMPTY_RETURN_VALUES</li>
+<li class='mutator'>INCREMENTS_MUTATOR</li>
+<li class='mutator'>INVERT_NEGS_MUTATOR</li>
+<li class='mutator'>MATH_MUTATOR</li>
+<li class='mutator'>NEGATE_CONDITIONALS_MUTATOR</li>
+<li class='mutator'>NULL_RETURN_VALUES</li>
+<li class='mutator'>PRIMITIVE_RETURN_VALS_MUTATOR</li>
+<li class='mutator'>VOID_METHOD_CALL_MUTATOR</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>io.lavagna.service.SearchServiceTest.testEmpty(io.lavagna.service.SearchServiceTest) (6 ms)</li><li>io.lavagna.service.SearchServiceTest.testFTS(io.lavagna.service.SearchServiceTest) (9 ms)</li><li>io.lavagna.service.CalendarServiceTest.testGetUserCalendarOnEmpty(io.lavagna.service.CalendarServiceTest) (8 ms)</li><li>io.lavagna.service.SearchServiceTest.testWithoutPagination(io.lavagna.service.SearchServiceTest) (42 ms)</li><li>io.lavagna.service.SearchServiceTest.testCreatedThisYear(io.lavagna.service.SearchServiceTest) (11 ms)</li><li>io.lavagna.service.SearchServiceTest.testUserWithReadPermissionInProject(io.lavagna.service.SearchServiceTest) (9 ms)</li><li>io.lavagna.service.ExcelExportServiceTest.testExportMilestoneToExcel(io.lavagna.service.ExcelExportServiceTest) (1052 ms)</li><li>io.lavagna.service.SearchServiceTest.testFindCreatedByMe(io.lavagna.service.SearchServiceTest) (7 ms)</li><li>io.lavagna.service.SearchServiceTest.testFindTaksByColumnDefinitionAfterMove(io.lavagna.service.SearchServiceTest) (9 ms)</li><li>io.lavagna.service.SearchServiceTest.testPagination(io.lavagna.service.SearchServiceTest) (46 ms)</li><li>io.lavagna.service.SearchServiceTest.testFindByStatus(io.lavagna.service.SearchServiceTest) (6 ms)</li><li>io.lavagna.service.SearchServiceTest.testInProject(io.lavagna.service.SearchServiceTest) (8 ms)</li><li>io.lavagna.service.SearchServiceTest.testSearchBoard(io.lavagna.service.SearchServiceTest) (10 ms)</li><li>io.lavagna.service.SearchServiceTest.testNoReadPermission(io.lavagna.service.SearchServiceTest) (6 ms)</li><li>io.lavagna.service.SearchServiceTest.testCreatedToday(io.lavagna.service.SearchServiceTest) (16 ms)</li><li>io.lavagna.service.SearchServiceTest.testUnassigned(io.lavagna.service.SearchServiceTest) (7 ms)</li><li>io.lavagna.service.SearchServiceTest.testFindTaksByColumnDefinitionOnManyCards(io.lavagna.service.SearchServiceTest) (85 ms)</li><li>io.lavagna.service.ExcelExportServiceTest.testExportProjectToExcel(io.lavagna.service.ExcelExportServiceTest) (33 ms)</li><li>io.lavagna.service.SearchServiceTest.testFindTaksByColumnDefinition(io.lavagna.service.SearchServiceTest) (9 ms)</li><li>io.lavagna.service.CalendarServiceTest.testGetStandardCalendar(io.lavagna.service.CalendarServiceTest) (15 ms)</li><li>io.lavagna.service.CalendarServiceTest.testGetCalDavCalendar(io.lavagna.service.CalendarServiceTest) (78 ms)</li><li>io.lavagna.service.SearchServiceTest.testFindByStatusAndCreatedByMe(io.lavagna.service.SearchServiceTest) (7 ms)</li><li>io.lavagna.service.CalendarServiceTest.testGetProjectStandardCalendar(io.lavagna.service.CalendarServiceTest) (13 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='http://pitest.org'>PIT</a> 1.5.2
+
+</body>
+</html>

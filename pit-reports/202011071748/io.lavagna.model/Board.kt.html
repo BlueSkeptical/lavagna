@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>Board.kt</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@185fee61_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@185fee61_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>/**</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@185fee61_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@185fee61_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * This file is part of lavagna.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@185fee61_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@185fee61_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@185fee61_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@185fee61_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * lavagna is free software: you can redistribute it and/or modify</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@185fee61_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@185fee61_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * it under the terms of the GNU General Public License as published by</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@185fee61_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@185fee61_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * the Free Software Foundation, either version 3 of the License, or</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@185fee61_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@185fee61_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * (at your option) any later version.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@185fee61_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@185fee61_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@185fee61_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@185fee61_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * lavagna is distributed in the hope that it will be useful,</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@185fee61_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@185fee61_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@185fee61_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@185fee61_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@185fee61_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@185fee61_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * GNU General Public License for more details.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@185fee61_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@185fee61_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@185fee61_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@185fee61_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * You should have received a copy of the GNU General Public License</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@185fee61_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@185fee61_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * along with lavagna.  If not, see //www.gnu.org/licenses/&#62;.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@185fee61_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@185fee61_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@185fee61_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@185fee61_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package io.lavagna.model</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@185fee61_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@185fee61_18'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@185fee61_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@185fee61_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import ch.digitalfondue.npjt.ConstructorAnnotationRowMapper.Column</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@185fee61_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@185fee61_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@185fee61_21'/>
+21
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@185fee61_21'>1</a>
+<span>
+1. getId : replaced int return with 0 for io/lavagna/model/Board::getId &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>open class Board(@Column(&#34;BOARD_ID&#34;) val id: Int,</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@185fee61_22'/>
+22
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@185fee61_22'>1</a>
+<span>
+1. getName : replaced return value with &#34;&#34; for io/lavagna/model/Board::getName &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            @Column(&#34;BOARD_NAME&#34;) val name: String?,</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@185fee61_23'/>
+23
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@185fee61_23'>1</a>
+<span>
+1. getShortName : replaced return value with &#34;&#34; for io/lavagna/model/Board::getShortName &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            @Column(&#34;BOARD_SHORT_NAME&#34;) val shortName: String?,</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@185fee61_24'/>
+24
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@185fee61_24'>1</a>
+<span>
+1. getDescription : replaced return value with &#34;&#34; for io/lavagna/model/Board::getDescription &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>            @Column(&#34;BOARD_DESCRIPTION&#34;) val description: String?,</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@185fee61_25'/>
+25
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@185fee61_25'>1</a>
+<span>
+1. getProjectId : replaced int return with 0 for io/lavagna/model/Board::getProjectId &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            @Column(&#34;BOARD_PROJECT_ID_FK&#34;) val projectId: Int,</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@185fee61_26'/>
+26
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@185fee61_26'>2</a>
+<span>
+1. getArchived : replaced boolean return with false for io/lavagna/model/Board::getArchived &rarr; SURVIVED<br/>
+2. getArchived : replaced boolean return with true for io/lavagna/model/Board::getArchived &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>            @Column(&#34;BOARD_ARCHIVED&#34;) val archived: Boolean)</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@185fee61_21'>21</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@185fee61_21'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getId<br/><b>Killed by : </b>io.lavagna.service.BoardRepositoryTest.testNothingFoundForFindByShortName(io.lavagna.service.BoardRepositoryTest)</span></span> replaced int return with 0 for io/lavagna/model/Board::getId &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@185fee61_22'>22</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@185fee61_22'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getName<br/><b>Killed by : </b>io.lavagna.service.BoardRepositoryTest.testRepoCreation(io.lavagna.service.BoardRepositoryTest)</span></span> replaced return value with &#34;&#34; for io/lavagna/model/Board::getName &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@185fee61_23'>23</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@185fee61_23'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getShortName<br/><b>Killed by : </b>io.lavagna.web.api.BoardColumnControllerTest.rename(io.lavagna.web.api.BoardColumnControllerTest)</span></span> replaced return value with &#34;&#34; for io/lavagna/model/Board::getShortName &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@185fee61_24'>24</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@185fee61_24'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getDescription<br/><b>Killed by : </b>none</span></span> replaced return value with &#34;&#34; for io/lavagna/model/Board::getDescription &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@185fee61_25'>25</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@185fee61_25'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getProjectId<br/><b>Killed by : </b>io.lavagna.web.api.ProjectControllerTest.testCreateMailTicketConfigToColumnInAnotherProject(io.lavagna.web.api.ProjectControllerTest)</span></span> replaced int return with 0 for io/lavagna/model/Board::getProjectId &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@185fee61_26'>26</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@185fee61_26'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getArchived<br/><b>Killed by : </b>none</span></span> replaced boolean return with false for io/lavagna/model/Board::getArchived &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>getArchived<br/><b>Killed by : </b>none</span></span> replaced boolean return with true for io/lavagna/model/Board::getArchived &rarr; SURVIVED</p> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+<li class='mutator'>BOOLEAN_FALSE_RETURN</li>
+<li class='mutator'>BOOLEAN_TRUE_RETURN</li>
+<li class='mutator'>CONDITIONALS_BOUNDARY_MUTATOR</li>
+<li class='mutator'>EMPTY_RETURN_VALUES</li>
+<li class='mutator'>INCREMENTS_MUTATOR</li>
+<li class='mutator'>INVERT_NEGS_MUTATOR</li>
+<li class='mutator'>MATH_MUTATOR</li>
+<li class='mutator'>NEGATE_CONDITIONALS_MUTATOR</li>
+<li class='mutator'>NULL_RETURN_VALUES</li>
+<li class='mutator'>PRIMITIVE_RETURN_VALS_MUTATOR</li>
+<li class='mutator'>VOID_METHOD_CALL_MUTATOR</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>io.lavagna.service.CardRepositoryTest.testMoveCardsToColumnWithoutReorder(io.lavagna.service.CardRepositoryTest) (7 ms)</li><li>io.lavagna.service.BulkOperationServiceTest.testAssign(io.lavagna.service.BulkOperationServiceTest) (60 ms)</li><li>io.lavagna.service.StatisticsServiceTest.getCardsByLabelOnBoardTest(io.lavagna.service.StatisticsServiceTest) (7 ms)</li><li>io.lavagna.service.ProjectServiceFindRelatedTest.testFindRelatedProjectShortNameByColumnId(io.lavagna.service.ProjectServiceFindRelatedTest) (7 ms)</li><li>io.lavagna.service.BoardColumnRepositoryTest.testFindColumnByIds(io.lavagna.service.BoardColumnRepositoryTest) (17 ms)</li><li>io.lavagna.service.CardLabelRepositoryTest.testFindLabelByName(io.lavagna.service.CardLabelRepositoryTest) (6 ms)</li><li>io.lavagna.service.BoardRepositoryTest.testFindByShortName(io.lavagna.service.BoardRepositoryTest) (11 ms)</li><li>io.lavagna.service.SearchServiceTest.testSearchBoard(io.lavagna.service.SearchServiceTest) (10 ms)</li><li>io.lavagna.service.BulkOperationServiceTest.testRemoveMilestone(io.lavagna.service.BulkOperationServiceTest) (29 ms)</li><li>io.lavagna.service.CardLabelRepositoryTest.testMoveLabelListValueToOrder(io.lavagna.service.CardLabelRepositoryTest) (6 ms)</li><li>io.lavagna.service.EventEmitterTest.emitUpdateBoardTest(io.lavagna.service.EventEmitterTest) (10 ms)</li><li>io.lavagna.service.CardServiceTest.testUpdateCard(io.lavagna.service.CardServiceTest) (13 ms)</li><li>io.lavagna.service.CardServiceTest.testCloneCard(io.lavagna.service.CardServiceTest) (17 ms)</li><li>io.lavagna.service.StatisticsServiceTest.testFindCardsByMilestoneOnEmptyProject(io.lavagna.service.StatisticsServiceTest) (5 ms)</li><li>io.lavagna.service.ProjectServiceFindRelatedTest.testFindRelatedProjectShortNameByLabelId(io.lavagna.service.ProjectServiceFindRelatedTest) (6 ms)</li><li>io.lavagna.service.StatisticsServiceTest.getTodayMostActiveCardByProjectTest(io.lavagna.service.StatisticsServiceTest) (4 ms)</li><li>io.lavagna.service.BulkOperationServiceTest.testSetMilestone(io.lavagna.service.BulkOperationServiceTest) (18 ms)</li><li>io.lavagna.service.CalendarServiceTest.testGetProjectStandardCalendar(io.lavagna.service.CalendarServiceTest) (13 ms)</li><li>io.lavagna.service.StatisticsServiceTest.getCardsStatusByBoardTest(io.lavagna.service.StatisticsServiceTest) (266 ms)</li><li>io.lavagna.service.CardLabelRepositoryTest.testFindLabelByNameWith2Projects(io.lavagna.service.CardLabelRepositoryTest) (8 ms)</li><li>io.lavagna.service.EventRepositoryTest.testGetLatestActivity(io.lavagna.service.EventRepositoryTest) (13 ms)</li><li>io.lavagna.service.StatisticsServiceTest.getCardsByLabelOnProjectTest(io.lavagna.service.StatisticsServiceTest) (6 ms)</li><li>io.lavagna.service.CalendarServiceTest.testSetCalendarFeedDisabled(io.lavagna.service.CalendarServiceTest) (6 ms)</li><li>io.lavagna.service.CardDataServiceTest.createFileWithoutCard(io.lavagna.service.CardDataServiceTest) (6 ms)</li><li>io.lavagna.web.api.ProjectControllerTest.testUpdateMailTicketConfig(io.lavagna.web.api.ProjectControllerTest) (1 ms)</li><li>io.lavagna.service.CardDataServiceTest.TestUpdateComment(io.lavagna.service.CardDataServiceTest) (9 ms)</li><li>io.lavagna.service.CardDataServiceTest.TestUploadSameFileToCard(io.lavagna.service.CardDataServiceTest) (11 ms)</li><li>io.lavagna.web.api.CardControllerTest.createFromTop(io.lavagna.web.api.CardControllerTest) (5 ms)</li><li>io.lavagna.service.StatisticsServiceTest.getCardsStatusByBoardOnDoubleCreateTest(io.lavagna.service.StatisticsServiceTest) (1536 ms)</li><li>io.lavagna.service.SearchServiceTest.testUnassigned(io.lavagna.service.SearchServiceTest) (7 ms)</li><li>io.lavagna.service.BoardRepositoryTest.testFindProjectAndBoardByColumnId(io.lavagna.service.BoardRepositoryTest) (11 ms)</li><li>io.lavagna.service.BoardRepositoryTest.testNothingFoundForFindByShortName(io.lavagna.service.BoardRepositoryTest) (7 ms)</li><li>io.lavagna.service.BoardColumnRepositoryTest.testRenameColumn(io.lavagna.service.BoardColumnRepositoryTest) (10 ms)</li><li>io.lavagna.service.MailTicketServiceTest.TestDisabledMailConfig(io.lavagna.service.MailTicketServiceTest) (8 ms)</li><li>io.lavagna.service.CardRepositoryTest.testFindCards(io.lavagna.service.CardRepositoryTest) (7 ms)</li><li>io.lavagna.service.CardLabelRepositoryTest.testSwapListLabel(io.lavagna.service.CardLabelRepositoryTest) (7 ms)</li><li>io.lavagna.service.CardDataServiceTest.TestDeleteFilesAndUndo(io.lavagna.service.CardDataServiceTest) (17 ms)</li><li>io.lavagna.service.EventRepositoryTest.testLastUpdateOnUndo(io.lavagna.service.EventRepositoryTest) (10 ms)</li><li>io.lavagna.service.CardDataServiceTest.TestUploadFiles(io.lavagna.service.CardDataServiceTest) (10 ms)</li><li>io.lavagna.web.api.CardControllerTest.createWithAssignedUsers(io.lavagna.web.api.CardControllerTest) (4 ms)</li><li>io.lavagna.web.api.CardControllerTest.createWithDescription(io.lavagna.web.api.CardControllerTest) (3 ms)</li><li>io.lavagna.service.BoardRepositoryTest.updateBoardTest(io.lavagna.service.BoardRepositoryTest) (8 ms)</li><li>io.lavagna.service.EventRepositoryTest.testGetLatestActivityByProjectsOnFakeProject(io.lavagna.service.EventRepositoryTest) (9 ms)</li><li>io.lavagna.service.CardLabelRepositoryTest.testFindUserLabelNameByGlobalRead(io.lavagna.service.CardLabelRepositoryTest) (6 ms)</li><li>io.lavagna.web.api.BoardColumnControllerTest.testMoveColumnWithoutReorder(io.lavagna.web.api.BoardColumnControllerTest) (2 ms)</li><li>io.lavagna.service.ProjectServiceTest.testFindBoardsByUserActivityWithPermissionsOnTest(io.lavagna.service.ProjectServiceTest) (7 ms)</li><li>io.lavagna.service.MailTicketServiceTest.TestDeleteMailConfig(io.lavagna.service.MailTicketServiceTest) (6 ms)</li><li>io.lavagna.service.CardDataServiceTest.TestDeleteActionListWithContentAndUndo(io.lavagna.service.CardDataServiceTest) (15 ms)</li><li>io.lavagna.service.ListValueMetadataRepositoryTest.testDeleteCascade(io.lavagna.service.ListValueMetadataRepositoryTest) (8 ms)</li><li>io.lavagna.service.BoardColumnRepositoryTest.testCantCreateArchiveInBoard(io.lavagna.service.BoardColumnRepositoryTest) (69 ms)</li><li>io.lavagna.service.CardRepositoryTest.testFindCardByInProject(io.lavagna.service.CardRepositoryTest) (9 ms)</li><li>io.lavagna.service.CardDataServiceTest.TestDeleteCommentAndUndo(io.lavagna.service.CardDataServiceTest) (11 ms)</li><li>io.lavagna.service.StatisticsServiceTest.getMostActiveCardByProjectTest(io.lavagna.service.StatisticsServiceTest) (5 ms)</li><li>io.lavagna.service.BoardColumnRepositoryTest.testMoveToLocation(io.lavagna.service.BoardColumnRepositoryTest) (29 ms)</li><li>io.lavagna.web.api.CardControllerTest.createWithLabels(io.lavagna.web.api.CardControllerTest) (3 ms)</li><li>io.lavagna.service.CardLabelRepositoryTest.testFindListValueById(io.lavagna.service.CardLabelRepositoryTest) (5 ms)</li><li>io.lavagna.service.CardRepositoryTest.testCreateCardAndFetchFull(io.lavagna.service.CardRepositoryTest) (6 ms)</li><li>io.lavagna.service.CalendarServiceTest.testGetUserCalendarOnDisabled(io.lavagna.service.CalendarServiceTest) (7 ms)</li><li>io.lavagna.service.CardRepositoryTest.testFindAllByIds(io.lavagna.service.CardRepositoryTest) (7 ms)</li><li>io.lavagna.service.BulkOperationServiceTest.testSetDueDate(io.lavagna.service.BulkOperationServiceTest) (14 ms)</li><li>io.lavagna.service.CardDataServiceTest.assignSameFileToCard(io.lavagna.service.CardDataServiceTest) (8 ms)</li><li>io.lavagna.service.EventRepositoryTest.testLastUpdateOnCardChange(io.lavagna.service.EventRepositoryTest) (14 ms)</li><li>io.lavagna.service.BoardColumnRepositoryTest.changeColumnDefinition(io.lavagna.service.BoardColumnRepositoryTest) (2045 ms)</li><li>io.lavagna.service.StatisticsServiceTest.getTodayMostActiveCardByBoardTest(io.lavagna.service.StatisticsServiceTest) (5 ms)</li><li>io.lavagna.service.SearchServiceTest.testFindByStatus(io.lavagna.service.SearchServiceTest) (6 ms)</li><li>io.lavagna.service.CalendarServiceTest.testGetUserCalendarWithWrongToken(io.lavagna.service.CalendarServiceTest) (6 ms)</li><li>io.lavagna.service.CardDataServiceTest.testCheckEnsureReferenceIdConstraints(io.lavagna.service.CardDataServiceTest) (6 ms)</li><li>io.lavagna.service.CardDataServiceTest.assignFileToCard(io.lavagna.service.CardDataServiceTest) (8 ms)</li><li>io.lavagna.service.BoardRepositoryTest.testNothingFoundForFindIdByShortName(io.lavagna.service.BoardRepositoryTest) (7 ms)</li><li>io.lavagna.service.ProjectServiceTest.testFindBoardsByUserActivityWithGlobalPermissions(io.lavagna.service.ProjectServiceTest) (6 ms)</li><li>io.lavagna.service.StatisticsServiceTest.getTomorrowMostActiveCardByProjectTest(io.lavagna.service.StatisticsServiceTest) (4 ms)</li><li>io.lavagna.service.ProjectServiceFindRelatedTest.testFindRelatedProjectShortNameByCardDataId(io.lavagna.service.ProjectServiceFindRelatedTest) (8 ms)</li><li>io.lavagna.service.MailTicketServiceTest.TestDisableTicketConfig(io.lavagna.service.MailTicketServiceTest) (8 ms)</li><li>io.lavagna.service.CardServiceTest.testMoveCardToColumnAndReorder(io.lavagna.service.CardServiceTest) (7 ms)</li><li>io.lavagna.service.SearchServiceTest.testUserWithReadPermissionInProject(io.lavagna.service.SearchServiceTest) (9 ms)</li><li>io.lavagna.service.BulkOperationServiceTest.testRemoveDueDate(io.lavagna.service.BulkOperationServiceTest) (20 ms)</li><li>io.lavagna.service.CardLabelRepositoryTest.testCountLabelListValueUse(io.lavagna.service.CardLabelRepositoryTest) (6 ms)</li><li>io.lavagna.web.api.CardControllerTest.createWithoutLabelsPermission(io.lavagna.web.api.CardControllerTest) (4 ms)</li><li>io.lavagna.web.api.ProjectControllerTest.findByShortName(io.lavagna.web.api.ProjectControllerTest) (1 ms)</li><li>io.lavagna.service.CardRepositoryTest.testUpdateCardOrder(io.lavagna.service.CardRepositoryTest) (8 ms)</li><li>io.lavagna.service.BoardColumnRepositoryTest.testFindColumnById(io.lavagna.service.BoardColumnRepositoryTest) (11 ms)</li><li>io.lavagna.service.MailTicketServiceTest.TestCreateMailConfig(io.lavagna.service.MailTicketServiceTest) (32 ms)</li><li>io.lavagna.service.CalendarServiceTest.testDeleteTokenCreation(io.lavagna.service.CalendarServiceTest) (17 ms)</li><li>io.lavagna.service.CardDataServiceTest.findByIds(io.lavagna.service.CardDataServiceTest) (7 ms)</li><li>io.lavagna.service.CardRepositoryTest.testMoveCardToColumnAndReorder(io.lavagna.service.CardRepositoryTest) (8 ms)</li><li>io.lavagna.service.LabelServiceTest.testAddLabelValueToCards(io.lavagna.service.LabelServiceTest) (9 ms)</li><li>io.lavagna.service.SearchServiceTest.testFindByStatusAndCreatedByMe(io.lavagna.service.SearchServiceTest) (7 ms)</li><li>io.lavagna.service.SearchServiceTest.testWithoutPagination(io.lavagna.service.SearchServiceTest) (42 ms)</li><li>io.lavagna.service.StatisticsServiceTest.getMostActiveCardByBoardTest(io.lavagna.service.StatisticsServiceTest) (7 ms)</li><li>io.lavagna.service.ExcelExportServiceTest.testExportMilestoneToExcel(io.lavagna.service.ExcelExportServiceTest) (1052 ms)</li><li>io.lavagna.service.CardDataServiceTest.TestMoveActionItem(io.lavagna.service.CardDataServiceTest) (17 ms)</li><li>io.lavagna.service.CardRepositoryTest.testUpdateCard(io.lavagna.service.CardRepositoryTest) (5 ms)</li><li>io.lavagna.service.EventEmitterTest.emitAddLabelValueToCardsTest(io.lavagna.service.EventEmitterTest) (204 ms)</li><li>io.lavagna.service.BoardColumnRepositoryTest.testGetColumnInfoById(io.lavagna.service.BoardColumnRepositoryTest) (13 ms)</li><li>io.lavagna.service.ExcelExportServiceTest.testGetWrongMilestone(io.lavagna.service.ExcelExportServiceTest) (14 ms)</li><li>io.lavagna.service.SearchServiceTest.testCreatedToday(io.lavagna.service.SearchServiceTest) (16 ms)</li><li>io.lavagna.web.api.ProjectControllerTest.create(io.lavagna.web.api.ProjectControllerTest) (61 ms)</li><li>io.lavagna.web.api.ProjectControllerTest.testCreateMailTicketConfigToColumnInAnotherProject(io.lavagna.web.api.ProjectControllerTest) (1 ms)</li><li>io.lavagna.service.CardRepositoryTest.testFindFullById(io.lavagna.service.CardRepositoryTest) (5 ms)</li><li>io.lavagna.service.SearchServiceTest.testFindTaksByColumnDefinitionOnManyCards(io.lavagna.service.SearchServiceTest) (85 ms)</li><li>io.lavagna.service.LabelServiceTest.testUpdateLabelValue(io.lavagna.service.LabelServiceTest) (8 ms)</li><li>io.lavagna.service.CardDataServiceTest.TestReorderActionLists(io.lavagna.service.CardDataServiceTest) (8 ms)</li><li>io.lavagna.service.SearchServiceTest.testFindTaksByColumnDefinition(io.lavagna.service.SearchServiceTest) (9 ms)</li><li>io.lavagna.service.CardLabelRepositoryTest.testAddDuplicateNameLabel(io.lavagna.service.CardLabelRepositoryTest) (7 ms)</li><li>io.lavagna.service.ListValueMetadataRepositoryTest.deleteAllWithLabelIdTest(io.lavagna.service.ListValueMetadataRepositoryTest) (25 ms)</li><li>io.lavagna.service.BulkOperationServiceTest.testReAssign(io.lavagna.service.BulkOperationServiceTest) (24 ms)</li><li>io.lavagna.service.CardRepositoryTest.testFetchPaginatedByBoardIdAndLocation(io.lavagna.service.CardRepositoryTest) (13 ms)</li><li>io.lavagna.service.CardRepositoryTest.testFindCardBy(io.lavagna.service.CardRepositoryTest) (10 ms)</li><li>io.lavagna.service.StatisticsServiceTest.testFindCardsByMilestone(io.lavagna.service.StatisticsServiceTest) (7 ms)</li><li>io.lavagna.service.StatisticsServiceTest.testFindCardsByMilestoneWithLabels(io.lavagna.service.StatisticsServiceTest) (7 ms)</li><li>io.lavagna.service.MailTicketServiceTest.TestEditTicketConfig(io.lavagna.service.MailTicketServiceTest) (10 ms)</li><li>io.lavagna.service.SearchServiceTest.testNoReadPermission(io.lavagna.service.SearchServiceTest) (6 ms)</li><li>io.lavagna.service.CardDataServiceTest.TestActionListAndItems(io.lavagna.service.CardDataServiceTest) (14 ms)</li><li>io.lavagna.service.ProjectServiceFindRelatedTest.testFindNothing(io.lavagna.service.ProjectServiceFindRelatedTest) (10 ms)</li><li>io.lavagna.service.CardLabelRepositoryTest.testRemoveLabel(io.lavagna.service.CardLabelRepositoryTest) (7 ms)</li><li>io.lavagna.service.EventEmitterTest.emitUpdateProjectTest(io.lavagna.service.EventEmitterTest) (10 ms)</li><li>io.lavagna.service.LabelServiceTest.testAddUniqueLabelValue(io.lavagna.service.LabelServiceTest) (6 ms)</li><li>io.lavagna.service.ProjectServiceFindRelatedTest.testFindRelatedProjectShortNameByBoardShortname(io.lavagna.service.ProjectServiceFindRelatedTest) (7 ms)</li><li>io.lavagna.service.BoardColumnRepositoryTest.testMoveToLocationNotBoard(io.lavagna.service.BoardColumnRepositoryTest) (9 ms)</li><li>io.lavagna.service.CardLabelRepositoryTest.testRemoveLabelListValue(io.lavagna.service.CardLabelRepositoryTest) (5 ms)</li><li>io.lavagna.service.SearchServiceTest.testEmpty(io.lavagna.service.SearchServiceTest) (6 ms)</li><li>io.lavagna.service.NotificationServiceTest.sendEmailTest(io.lavagna.service.NotificationServiceTest) (102 ms)</li><li>io.lavagna.service.SearchServiceTest.testFTS(io.lavagna.service.SearchServiceTest) (9 ms)</li><li>io.lavagna.web.api.ProjectControllerTest.findProjects(io.lavagna.web.api.ProjectControllerTest) (2 ms)</li><li>io.lavagna.web.api.CardControllerTest.createWithoutFilesPermission(io.lavagna.web.api.CardControllerTest) (2 ms)</li><li>io.lavagna.service.CalendarServiceTest.testDoubleFindTokenCreation(io.lavagna.service.CalendarServiceTest) (6 ms)</li><li>io.lavagna.service.CardRepositoryTest.testFindFullBySeq(io.lavagna.service.CardRepositoryTest) (6 ms)</li><li>io.lavagna.service.CardDataServiceTest.TestUpdateDescription(io.lavagna.service.CardDataServiceTest) (12 ms)</li><li>io.lavagna.service.ImportServiceTest.saveTrelloBoardsToDbCheckListTest(io.lavagna.service.ImportServiceTest) (20 ms)</li><li>io.lavagna.service.LabelServiceTest.testAddLabel(io.lavagna.service.LabelServiceTest) (8 ms)</li><li>io.lavagna.service.BulkOperationServiceTest.testWatch(io.lavagna.service.BulkOperationServiceTest) (13 ms)</li><li>io.lavagna.service.CardLabelRepositoryTest.testLabelListValueMapping(io.lavagna.service.CardLabelRepositoryTest) (7 ms)</li><li>io.lavagna.service.EventEmitterTest.emitRemoveLabelValueToCardsTest(io.lavagna.service.EventEmitterTest) (12 ms)</li><li>io.lavagna.service.CardRepositoryTest.testCreateCardAndFetch(io.lavagna.service.CardRepositoryTest) (8 ms)</li><li>io.lavagna.service.CardRepositoryTest.testFindCardsId(io.lavagna.service.CardRepositoryTest) (11 ms)</li><li>io.lavagna.service.MailTicketServiceTest.TestDeleteTicketConfig(io.lavagna.service.MailTicketServiceTest) (6 ms)</li><li>io.lavagna.service.CalendarServiceTest.testGetUserCalendarOnEmpty(io.lavagna.service.CalendarServiceTest) (8 ms)</li><li>io.lavagna.service.ProjectServiceFindRelatedTest.testFindRelatedProjectShortNameByLabelListValudIdPath(io.lavagna.service.ProjectServiceFindRelatedTest) (7 ms)</li><li>io.lavagna.service.StatisticsServiceTest.getAverageUsersPerCardOnBoardTest(io.lavagna.service.StatisticsServiceTest) (8 ms)</li><li>io.lavagna.web.api.ProjectControllerTest.testCreateMailTicketConfig(io.lavagna.web.api.ProjectControllerTest) (3 ms)</li><li>io.lavagna.service.ProjectServiceFindRelatedTest.testFindRelatedProjectShortNameByLabelValueId(io.lavagna.service.ProjectServiceFindRelatedTest) (8 ms)</li><li>io.lavagna.service.CardDataServiceTest.TestDeleteActionItemAndUndo(io.lavagna.service.CardDataServiceTest) (11 ms)</li><li>io.lavagna.service.CardDataRepositoryTest.testFindDataByIdsWithEmptyCollection(io.lavagna.service.CardDataRepositoryTest) (6 ms)</li><li>io.lavagna.service.CardServiceTest.testFetchAllInColumn(io.lavagna.service.CardServiceTest) (13 ms)</li><li>io.lavagna.service.EventRepositoryTest.testGetUserActivityForProject(io.lavagna.service.EventRepositoryTest) (7 ms)</li><li>io.lavagna.service.BoardRepositoryTest.testFindIdByShortName(io.lavagna.service.BoardRepositoryTest) (18 ms)</li><li>io.lavagna.service.CardDataServiceTest.TestToggleActionItem(io.lavagna.service.CardDataServiceTest) (11 ms)</li><li>io.lavagna.service.EventRepositoryTest.testGetLatestActivityByPageAndProjects(io.lavagna.service.EventRepositoryTest) (8 ms)</li><li>io.lavagna.service.CardRepositoryTest.testExistCardWith(io.lavagna.service.CardRepositoryTest) (5 ms)</li><li>io.lavagna.service.LabelServiceTest.testCardLabelEnsureTypeConstraint(io.lavagna.service.LabelServiceTest) (6 ms)</li><li>io.lavagna.service.BulkOperationServiceTest.testUserLabel(io.lavagna.service.BulkOperationServiceTest) (19 ms)</li><li>io.lavagna.service.SearchServiceTest.testCreatedThisYear(io.lavagna.service.SearchServiceTest) (11 ms)</li><li>io.lavagna.web.api.CardControllerTest.createWithFiles(io.lavagna.web.api.CardControllerTest) (5 ms)</li><li>io.lavagna.service.CardDataServiceTest.TestUpdateActionList(io.lavagna.service.CardDataServiceTest) (9 ms)</li><li>io.lavagna.service.ExportImportServiceTest.testImportAndExport(io.lavagna.service.ExportImportServiceTest) (335 ms)</li><li>io.lavagna.service.SearchServiceTest.testPagination(io.lavagna.service.SearchServiceTest) (46 ms)</li><li>io.lavagna.service.StatisticsServiceTest.getActiveUsersOnBoardTest(io.lavagna.service.StatisticsServiceTest) (15 ms)</li><li>io.lavagna.service.SearchServiceTest.testInProject(io.lavagna.service.SearchServiceTest) (8 ms)</li><li>io.lavagna.service.StatisticsServiceTest.getCreatedAndClosedCardsByMilestoneTest(io.lavagna.service.StatisticsServiceTest) (7 ms)</li><li>io.lavagna.service.NotificationServiceTest.testCheck(io.lavagna.service.NotificationServiceTest) (10 ms)</li><li>io.lavagna.service.BoardColumnRepositoryTest.testCantCreateTrashInBoard(io.lavagna.service.BoardColumnRepositoryTest) (13 ms)</li><li>io.lavagna.service.CardRepositoryTest.testCreateCardFromTopAndOrder(io.lavagna.service.CardRepositoryTest) (7 ms)</li><li>io.lavagna.service.EventEmitterTest.emitCreateProjectTest(io.lavagna.service.EventEmitterTest) (16 ms)</li><li>io.lavagna.service.CardLabelRepositoryTest.testFindUserLabelNameByProjectNoReadWithProjectId(io.lavagna.service.CardLabelRepositoryTest) (6 ms)</li><li>io.lavagna.service.ListValueMetadataRepositoryTest.listValueMetadataLifecycleTest(io.lavagna.service.ListValueMetadataRepositoryTest) (8 ms)</li><li>io.lavagna.service.CalendarServiceTest.testTokenCreation(io.lavagna.service.CalendarServiceTest) (6 ms)</li><li>io.lavagna.service.BoardRepositoryTest.testRepoCreation(io.lavagna.service.BoardRepositoryTest) (7 ms)</li><li>io.lavagna.service.StatisticsServiceTest.getCardsStatusByProjectTest(io.lavagna.service.StatisticsServiceTest) (262 ms)</li><li>io.lavagna.service.CardRepositoryTest.testUpdateCardOrderEmpty(io.lavagna.service.CardRepositoryTest) (4 ms)</li><li>io.lavagna.service.LabelServiceTest.testAddLabelValueToCard(io.lavagna.service.LabelServiceTest) (7 ms)</li><li>io.lavagna.web.api.CardControllerTest.updateCard(io.lavagna.web.api.CardControllerTest) (3 ms)</li><li>io.lavagna.service.BoardColumnRepositoryTest.testUpateOrder(io.lavagna.service.BoardColumnRepositoryTest) (13 ms)</li><li>io.lavagna.web.api.ProjectControllerTest.testUpdateMailTicketConfigToColumnInAnotherProject(io.lavagna.web.api.ProjectControllerTest) (0 ms)</li><li>io.lavagna.service.StatisticsServiceTest.getCreatedAndClosedCardsByBoardTest(io.lavagna.service.StatisticsServiceTest) (11 ms)</li><li>io.lavagna.service.NotificationServiceTest.sendEmailTestWithoutMyEvents(io.lavagna.service.NotificationServiceTest) (17 ms)</li><li>io.lavagna.service.ImportServiceTest.saveTrelloBoardsToDbTest(io.lavagna.service.ImportServiceTest) (13 ms)</li><li>io.lavagna.service.ProjectServiceFindRelatedTest.testFindRelatedProjectShortNameByEventId(io.lavagna.service.ProjectServiceFindRelatedTest) (8 ms)</li><li>io.lavagna.service.CardDataRepositoryTest.testFindMetadataById(io.lavagna.service.CardDataRepositoryTest) (8 ms)</li><li>io.lavagna.service.BoardRepositoryTest.testRepoCreationConstraint(io.lavagna.service.BoardRepositoryTest) (8 ms)</li><li>io.lavagna.web.api.ProjectControllerTest.testUpdateMailTicketConfigToAnotherProject(io.lavagna.web.api.ProjectControllerTest) (1 ms)</li><li>io.lavagna.service.CardLabelRepositoryTest.testUpdateLabelWithValuesAndNewType(io.lavagna.service.CardLabelRepositoryTest) (7 ms)</li><li>io.lavagna.web.api.CardControllerTest.create(io.lavagna.web.api.CardControllerTest) (384 ms)</li><li>io.lavagna.service.StatisticsServiceTest.getCreatedAndClosedCardsByProjectTest(io.lavagna.service.StatisticsServiceTest) (7 ms)</li><li>io.lavagna.service.ImportServiceTest.saveTrelloBoardsToDbLabelsTest(io.lavagna.service.ImportServiceTest) (9 ms)</li><li>io.lavagna.service.StatisticsServiceTest.getAverageCardsPerUserOnProjectTest(io.lavagna.service.StatisticsServiceTest) (8 ms)</li><li>io.lavagna.web.api.ProjectControllerTest.testCreateMailTicketConfigToAnotherProject(io.lavagna.web.api.ProjectControllerTest) (1 ms)</li><li>io.lavagna.service.MailTicketServiceTest.TestCreateTicketConfig(io.lavagna.service.MailTicketServiceTest) (7 ms)</li><li>io.lavagna.service.BoardRepositoryTest.testFindBoard(io.lavagna.service.BoardRepositoryTest) (8 ms)</li><li>io.lavagna.service.ProjectServiceFindRelatedTest.testFindRelatedProjectShortNameByCardId(io.lavagna.service.ProjectServiceFindRelatedTest) (25 ms)</li><li>io.lavagna.service.EventRepositoryTest.testGetLatestActivityByProjects(io.lavagna.service.EventRepositoryTest) (8 ms)</li><li>io.lavagna.web.api.BoardColumnControllerTest.rename(io.lavagna.web.api.BoardColumnControllerTest) (2 ms)</li><li>io.lavagna.web.api.BoardControllerTest.testFindBoardByShortName(io.lavagna.web.api.BoardControllerTest) (155 ms)</li><li>io.lavagna.service.CardLabelRepositoryTest.testFindUserLabelNameByProjectNoReadWithProjectIdNull(io.lavagna.service.CardLabelRepositoryTest) (6 ms)</li><li>io.lavagna.service.CardLabelRepositoryTest.testUpdateLabel(io.lavagna.service.CardLabelRepositoryTest) (5 ms)</li><li>io.lavagna.web.api.ProjectControllerTest.updateColumnDefinition(io.lavagna.web.api.ProjectControllerTest) (1 ms)</li><li>io.lavagna.service.CalendarServiceTest.testGetCalDavCalendar(io.lavagna.service.CalendarServiceTest) (78 ms)</li><li>io.lavagna.service.BoardColumnRepositoryTest.testFindColumnByIdNothingFound(io.lavagna.service.BoardColumnRepositoryTest) (11 ms)</li><li>io.lavagna.service.ExcelExportServiceTest.testGetMilestone(io.lavagna.service.ExcelExportServiceTest) (11 ms)</li><li>io.lavagna.web.api.ProjectControllerTest.testExportMilestoneToExcel(io.lavagna.web.api.ProjectControllerTest) (4 ms)</li><li>io.lavagna.service.EventEmitterTest.emitUpdateOrAddValueToCardsTest(io.lavagna.service.EventEmitterTest) (13 ms)</li><li>io.lavagna.service.EventEmitterTest.emitUpdateUserProfileTest(io.lavagna.service.EventEmitterTest) (9 ms)</li><li>io.lavagna.service.MailTicketServiceTest.TestEditMailConfig(io.lavagna.service.MailTicketServiceTest) (9 ms)</li><li>io.lavagna.service.SearchServiceTest.testFindCreatedByMe(io.lavagna.service.SearchServiceTest) (7 ms)</li><li>io.lavagna.service.StatisticsServiceTest.getActiveUsersOnProjectTest(io.lavagna.service.StatisticsServiceTest) (5 ms)</li><li>io.lavagna.service.StatisticsServiceTest.getAverageUsersPerCardOnProjectTest(io.lavagna.service.StatisticsServiceTest) (9 ms)</li><li>io.lavagna.web.api.CardControllerTest.createWithDueDate(io.lavagna.web.api.CardControllerTest) (3 ms)</li><li>io.lavagna.web.api.ProjectControllerTest.projectStatistics(io.lavagna.web.api.ProjectControllerTest) (2 ms)</li><li>io.lavagna.service.CardDataServiceTest.TestReorderActionList(io.lavagna.service.CardDataServiceTest) (10 ms)</li><li>io.lavagna.service.CardLabelRepositoryTest.testFindListValueByIdWithBadId(io.lavagna.service.CardLabelRepositoryTest) (7 ms)</li><li>io.lavagna.service.BoardColumnRepositoryTest.testCantCreateBacklogInBoard(io.lavagna.service.BoardColumnRepositoryTest) (16 ms)</li><li>io.lavagna.service.ExcelExportServiceTest.testExportProjectToExcel(io.lavagna.service.ExcelExportServiceTest) (33 ms)</li><li>io.lavagna.service.LabelServiceTest.testRemoveLabelValue(io.lavagna.service.LabelServiceTest) (7 ms)</li><li>io.lavagna.web.api.ProjectControllerTest.findBoards(io.lavagna.web.api.ProjectControllerTest) (1 ms)</li><li>io.lavagna.service.CardDataServiceTest.TestUpdateActionItem(io.lavagna.service.CardDataServiceTest) (8 ms)</li><li>io.lavagna.service.BoardColumnRepositoryTest.testFindAllColumn(io.lavagna.service.BoardColumnRepositoryTest) (14 ms)</li><li>io.lavagna.service.CardLabelRepositoryTest.testFindUserLabelNameByProjectRead(io.lavagna.service.CardLabelRepositoryTest) (6 ms)</li><li>io.lavagna.service.CardRepositoryTest.testFetchAllActivityByCardId(io.lavagna.service.CardRepositoryTest) (7 ms)</li><li>io.lavagna.service.EventRepositoryTest.testGetLatestActivityByPageAndProjectsOnFakeProject(io.lavagna.service.EventRepositoryTest) (9 ms)</li><li>io.lavagna.service.CardLabelRepositoryTest.testWrongUpdateSystemLabel(io.lavagna.service.CardLabelRepositoryTest) (5 ms)</li><li>io.lavagna.service.SearchServiceTest.testFindTaksByColumnDefinitionAfterMove(io.lavagna.service.SearchServiceTest) (9 ms)</li><li>io.lavagna.service.ProjectServiceFindRelatedTest.testFindRelatedProjectShortNameByColumnDefinitionId(io.lavagna.service.ProjectServiceFindRelatedTest) (8 ms)</li><li>io.lavagna.service.CardEventRepositoryTest.findUsersIdFor(io.lavagna.service.CardEventRepositoryTest) (10 ms)</li><li>io.lavagna.service.EventRepositoryTest.testGetUserActivityForEmptyProjectst(io.lavagna.service.EventRepositoryTest) (7 ms)</li><li>io.lavagna.service.CardLabelRepositoryTest.testUpdateSystemLabel(io.lavagna.service.CardLabelRepositoryTest) (6 ms)</li><li>io.lavagna.service.StatisticsServiceTest.testFindCardsByMilestoneOnTrashedCards(io.lavagna.service.StatisticsServiceTest) (8 ms)</li><li>io.lavagna.service.StatisticsServiceTest.getTomorrowMostActiveCardByBoardTest(io.lavagna.service.StatisticsServiceTest) (5 ms)</li><li>io.lavagna.service.MailTicketServiceTest.TestDeleteMailConfigWithTicketConfigs(io.lavagna.service.MailTicketServiceTest) (7 ms)</li><li>io.lavagna.service.StatisticsServiceTest.getCardsStatusByBoardOnDoubleSnapshotTest(io.lavagna.service.StatisticsServiceTest) (1541 ms)</li><li>io.lavagna.service.StatisticsServiceTest.getAverageCardsPerUserOnBoardTest(io.lavagna.service.StatisticsServiceTest) (9 ms)</li><li>io.lavagna.web.api.ProjectControllerTest.update(io.lavagna.web.api.ProjectControllerTest) (0 ms)</li><li>io.lavagna.service.EventRepositoryTest.testGetLatestActivityByPage(io.lavagna.service.EventRepositoryTest) (9 ms)</li><li>io.lavagna.service.CardLabelRepositoryTest.testFindLabelValueByLabelAndValue(io.lavagna.service.CardLabelRepositoryTest) (8 ms)</li><li>io.lavagna.service.BulkOperationServiceTest.testRemoveWatch(io.lavagna.service.BulkOperationServiceTest) (17 ms)</li><li>io.lavagna.service.CardLabelRepositoryTest.testHandleLabelListValueMetadata(io.lavagna.service.CardLabelRepositoryTest) (7 ms)</li><li>io.lavagna.service.CardDataServiceTest.TestCreateCommentAndFetch(io.lavagna.service.CardDataServiceTest) (11 ms)</li><li>io.lavagna.service.BoardColumnRepositoryTest.testDefaultColumnsOnRepoCreation(io.lavagna.service.BoardColumnRepositoryTest) (14 ms)</li><li>io.lavagna.service.ListValueMetadataRepositoryTest.findAll(io.lavagna.service.ListValueMetadataRepositoryTest) (9 ms)</li><li>io.lavagna.service.BoardRepositoryTest.findBoardInfoTest(io.lavagna.service.BoardRepositoryTest) (9 ms)</li><li>io.lavagna.web.api.ProjectControllerTest.createBoard(io.lavagna.web.api.ProjectControllerTest) (2 ms)</li><li>io.lavagna.web.api.CardControllerTest.createWithMilestone(io.lavagna.web.api.CardControllerTest) (3 ms)</li><li>io.lavagna.service.CalendarServiceTest.testGetStandardCalendar(io.lavagna.service.CalendarServiceTest) (15 ms)</li><li>io.lavagna.service.EventRepositoryTest.testGetUserActivity(io.lavagna.service.EventRepositoryTest) (8 ms)</li><li>io.lavagna.service.LabelServiceTest.testAddNonUniqueLabelValue(io.lavagna.service.LabelServiceTest) (7 ms)</li><li>io.lavagna.service.CardLabelRepositoryTest.testAddLabelListValue(io.lavagna.service.CardLabelRepositoryTest) (9 ms)</li><li>io.lavagna.service.ExcelExportServiceTest.testExportMilestoneToExcelWrongValue(io.lavagna.service.ExcelExportServiceTest) (11 ms)</li><li>io.lavagna.service.BoardColumnRepositoryTest.testAddColumn(io.lavagna.service.BoardColumnRepositoryTest) (14 ms)</li><li>io.lavagna.service.StatisticsServiceTest.testFindCardsByMilestoneOnMultipleProjects(io.lavagna.service.StatisticsServiceTest) (6 ms)</li><li>io.lavagna.service.BulkOperationServiceTest.testRemoveAssign(io.lavagna.service.BulkOperationServiceTest) (19 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='http://pitest.org'>PIT</a> 1.5.2
+
+</body>
+</html>

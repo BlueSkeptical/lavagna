@@ -355,6 +355,11 @@
         <finalName>lavagna</finalName>
         <plugins>
             <plugin>
+	        <groupId>org.pitest</groupId>
+	        <artifactId>pitest-maven</artifactId>
+	        <version>1.5.2</version>
+            </plugin>
+            <plugin>
                 <groupId>org.jetbrains.kotlin</groupId>
                 <artifactId>kotlin-maven-plugin</artifactId>
                 <version>${kotlin.version}</version>
